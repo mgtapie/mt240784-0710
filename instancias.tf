@@ -10,13 +10,16 @@ resource "aws_instance" "instancia-07OCT" {
   }
   connection {
       type = "ssh"
-      user = "centos"
+      user = "ubuntu"
       private_key = file("C:\\Users/Martin/Desktop/practico-2.pem")
       host = self.public_ip
       }
       provisioner "remote-exec" {
           inline = [
-              "echo 'hola mundo' > archivo",
+            "sudo apt-get update -y",
+            "sudo apt-get install -y ca-certificates wget",
+            "wget https://get.glennr.nl/unifi/install/unifi-5.13.32.sh",
           ]
+          on_failure = continue
       }
 }

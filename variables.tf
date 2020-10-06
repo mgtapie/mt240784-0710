@@ -15,5 +15,5 @@ variable "subnet" {
 }
 
 output "dns-publico" {
-  value = aws_instance.terraform-practico2-instance.public_dns
+  value = aws_instance.instancia-07OCT.public_dns
 }
