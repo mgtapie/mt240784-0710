@@ -2,11 +2,11 @@ resource "aws_instance" "instancia-07OCT" {
   ami           = "ami-0817d428a6fb68645"
   instance_type = "t2.micro"
   key_name      = "practico-2"
-  vpc_security_group_ids = [aws_security_group.practico-2.id,
+  vpc_security_group_ids = [aws_security_group.practico-07OCT.id,
   ]
   subnet_id = aws_subnet.practico2-private-subnet.id
   tags = {
-    Name = "terraform-practico2-instance"
+    Name = "practico-07OCT-240784"
   }
   connection {
       type = "ssh"

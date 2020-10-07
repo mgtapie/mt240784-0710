@@ -18,7 +18,7 @@ resource "aws_subnet" "practico2-private-subnet" {
 }
 
 resource "aws_internet_gateway" "practico-07OCT-gateway" {
-  vpc_id = aws_vpc.practico2-vpc.id
+  vpc_id = aws_vpc.practico-07OCT-vpc.id
   tags = {
     Name = "practico-07OCT-gateway"
   }
